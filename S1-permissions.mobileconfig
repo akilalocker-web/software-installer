@@ -12,9 +12,9 @@
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>zivian.sentinelone.pppc</string>
+            <string>zivian.sentinelone.pppc</string>#changecustomername
             <key>PayloadUUID</key>
-            <string>321AB114-A404-4703-ACF6-517FF34BBC51</string>
+            <string>321AB114-A404-4703-ACF6-517FF34BBC51</string>#changeUUID
             <key>PayloadDisplayName</key>
             <string>SentinelOne Privacy Preferences</string>
             
@@ -76,9 +76,9 @@
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>zivian.sentinelone.systemextensions</string>
+            <string>zivian.sentinelone.systemextensions</string>changecustomername
             <key>PayloadUUID</key>
-            <string>2A483913-BF11-4F3A-8846-ABDC1FFA5534</string>
+            <string>2A483913-BF11-4F3A-8846-ABDC1FFA5534</string>#changeUUID
             <key>PayloadDisplayName</key>
             <string>SentinelOne System Extensions</string>
             
@@ -107,9 +107,9 @@
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>zivian.sentinelone.contentfilter</string>
+            <string>zivian.sentinelone.contentfilter</string>changecustomername
             <key>PayloadUUID</key>
-            <string>DD7DEC8F-7444-41D0-9DB8-F136BE641731</string>
+            <string>DD7DEC8F-7444-41D0-9DB8-F136BE641731</string>#changeUUID
             <key>PayloadDisplayName</key>
             <string>SentinelOne Content Filter</string>
             
@@ -134,9 +134,9 @@
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>zivian.sentinelone.notifications</string>
+            <string>zivian.sentinelone.notifications</string>changecustomername
             <key>PayloadUUID</key>
-            <string>36B25F78-DC72-43ED-8AB7-27D276A68B7C</string>
+            <string>36B25F78-DC72-43ED-8AB7-27D276A68B7C</string>#changeUUID
             <key>PayloadDisplayName</key>
             <string>SentinelOne Notifications</string>
             
@@ -171,9 +171,9 @@
     <key>PayloadDescription</key>
     <string>Grants SentinelOne required system permissions for Full Disk Access, Network Monitoring, Content Filter, and Notifications</string>
     <key>PayloadIdentifier</key>
-    <string>zivian.sentinelone.main</string>
+    <string>zivian.sentinelone.main</string>changecustomername
     <key>PayloadOrganization</key>
-    <string>zivian</string>
+    <string>zivian</string>changecustomername
     <key>PayloadRemovalDisallowed</key>
     <true/>
     <key>PayloadScope</key>
@@ -181,7 +181,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>74800D18-FF4A-4D80-812A-F22F6F222D7E</string>
+    <string>74800D18-FF4A-4D80-812A-F22F6F222D7E</string>#changeUUID
     <key>PayloadVersion</key>
     <integer>1</integer>
     
