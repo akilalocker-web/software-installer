@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        
+        <!-- PAYLOAD 1: Full Disk Access (PPPC) -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.TCC.configuration-profile-policy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>zivian.sentinelone.pppc</string>
+            <key>PayloadUUID</key>
+            <string>321AB114-A404-4703-ACF6-517FF34BBC51</string>
+            <key>PayloadDisplayName</key>
+            <string>SentinelOne Privacy Preferences</string>
+            
+            <key>Services</key>
+            <dict>
+                <key>SystemPolicyAllFiles</key>
+                <array>
+                    
+                    <!-- Component 1: sentineld -->
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.sentinelone.sentineld</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.sentinelone.sentineld" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "4AYE5J54KN")</string>
+                        <key>StaticCode</key>
+                        <false/>
+                        <key>Allowed</key>
+                        <integer>1</integer>
+                    </dict>
+                    
+                    <!-- Component 2: sentineld-helper -->
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.sentinelone.sentineld-helper</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.sentinelone.sentineld-helper" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "4AYE5J54KN")</string>
+                        <key>StaticCode</key>
+                        <false/>
+                        <key>Allowed</key>
+                        <integer>1</integer>
+                    </dict>
+                    
+                    <!-- Component 3: sentineld-shell (Agent 21.7+) -->
+                    <dict>
+                        <key>Identifier</key>
+                        <string>com.sentinelone.sentineld-shell</string>
+                        <key>IdentifierType</key>
+                        <string>bundleID</string>
+                        <key>CodeRequirement</key>
+                        <string>anchor apple generic and identifier "com.sentinelone.sentineld-shell" and (certificate leaf[field.1.2.840.113635.100.6.1.9] or certificate 1[field.1.2.840.113635.100.6.2.6] and certificate leaf[field.1.2.840.113635.100.6.1.13] and certificate leaf[subject.OU] = "4AYE5J54KN")</string>
+                        <key>StaticCode</key>
+                        <false/>
+                        <key>Allowed</key>
+                        <integer>1</integer>
+                    </dict>
+                    
+                </array>
+            </dict>
+        </dict>
+        
+        <!-- PAYLOAD 2: System Extensions (Network Monitoring) -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.system-extension-policy</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>zivian.sentinelone.systemextensions</string>
+            <key>PayloadUUID</key>
+            <string>2A483913-BF11-4F3A-8846-ABDC1FFA5534</string>
+            <key>PayloadDisplayName</key>
+            <string>SentinelOne System Extensions</string>
+            
+            <key>AllowedSystemExtensions</key>
+            <dict>
+                <key>4AYE5J54KN</key>
+                <array>
+                    <string>com.sentinelone.network-monitoring</string>
+                </array>
+            </dict>
+            
+            <key>AllowedSystemExtensionTypes</key>
+            <dict>
+                <key>4AYE5J54KN</key>
+                <array>
+                    <string>NetworkExtension</string>
+                    <string>EndpointSecurityExtension</string>
+                </array>
+            </dict>
+        </dict>
+        
+        <!-- PAYLOAD 3: Content Filter (Network Filter Validation) -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.webcontent-filter</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>zivian.sentinelone.contentfilter</string>
+            <key>PayloadUUID</key>
+            <string>DD7DEC8F-7444-41D0-9DB8-F136BE641731</string>
+            <key>PayloadDisplayName</key>
+            <string>SentinelOne Content Filter</string>
+            
+            <key>FilterType</key>
+            <string>Plugin</string>
+            <key>UserDefinedName</key>
+            <string>SentinelOne Network Filter</string>
+            <key>PluginBundleID</key>
+            <string>com.sentinelone.extensions-wrapper</string>
+            <key>FilterSockets</key>
+            <true/>
+            <key>FilterDataProviderBundleIdentifier</key>
+            <string>com.sentinelone.network-monitoring</string>
+            <key>FilterDataProviderDesignatedRequirement</key>
+            <string>anchor apple generic and identifier "com.sentinelone.network-monitoring" and (certificate leaf[field.1.2.840.113635.100.6.1.9] or certificate 1[field.1.2.840.113635.100.6.2.6] and certificate leaf[field.1.2.840.113635.100.6.1.13] and certificate leaf[subject.OU] = "4AYE5J54KN")</string>
+        </dict>
+        
+        <!-- PAYLOAD 4: Notifications -->
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.notificationsettings</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>zivian.sentinelone.notifications</string>
+            <key>PayloadUUID</key>
+            <string>36B25F78-DC72-43ED-8AB7-27D276A68B7C</string>
+            <key>PayloadDisplayName</key>
+            <string>SentinelOne Notifications</string>
+            
+            <key>NotificationSettings</key>
+            <array>
+                <dict>
+                    <key>BundleIdentifier</key>
+                    <string>com.sentinelone.SentinelAgent</string>
+                    <key>NotificationsEnabled</key>
+                    <true/>
+                    <key>ShowInNotificationCenter</key>
+                    <true/>
+                    <key>ShowInLockScreen</key>
+                    <true/>
+                    <key>AlertType</key>
+                    <integer>1</integer>
+                    <key>BadgesEnabled</key>
+                    <true/>
+                    <key>SoundsEnabled</key>
+                    <true/>
+                    <key>CriticalAlertEnabled</key>
+                    <true/>
+                </dict>
+            </array>
+        </dict>
+        
+    </array>
+    
+    <!-- Profile-Level Settings -->
+    <key>PayloadDisplayName</key>
+    <string>SentinelOne System Permissions</string>
+    <key>PayloadDescription</key>
+    <string>Grants SentinelOne required system permissions for Full Disk Access, Network Monitoring, Content Filter, and Notifications</string>
+    <key>PayloadIdentifier</key>
+    <string>zivian.sentinelone.main</string>
+    <key>PayloadOrganization</key>
+    <string>zivian</string>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>74800D18-FF4A-4D80-812A-F22F6F222D7E</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    
+</dict>
+</plist>
